@@ -40,3 +40,8 @@ replace_chests: true
 viaversion_support: false
 # Enable command logging to console
 enable_command_logging: false
+# Enable discord webhook
+discord_webhook_enabled: false
+# URL for when the discord webhook is enabled, an invalid URL will
+# disconnect player when they send a message through the proxy
+discord_webhook_url: ""

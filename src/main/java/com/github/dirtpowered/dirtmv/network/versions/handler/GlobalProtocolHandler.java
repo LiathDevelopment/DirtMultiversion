@@ -22,6 +22,8 @@
 
 package com.github.dirtpowered.dirtmv.network.versions.handler;
 
+import com.github.dirtpowered.dirtmv.api.Configuration;
+import com.github.dirtpowered.dirtmv.config.YamlConfig;
 import com.github.dirtpowered.dirtmv.data.MinecraftVersion;
 import com.github.dirtpowered.dirtmv.data.protocol.PacketData;
 import com.github.dirtpowered.dirtmv.data.protocol.Type;
@@ -30,12 +32,16 @@ import com.github.dirtpowered.dirtmv.data.translator.PacketTranslator;
 import com.github.dirtpowered.dirtmv.data.translator.ProtocolState;
 import com.github.dirtpowered.dirtmv.data.translator.ServerProtocol;
 import com.github.dirtpowered.dirtmv.network.server.ServerSession;
+
+import org.liathdevelopment.discord.webhook.DiscordWebhookHandler;
 import org.pmw.tinylog.Logger;
 
 public class GlobalProtocolHandler extends ServerProtocol {
+	private final Configuration configuration;
 
     public GlobalProtocolHandler(MinecraftVersion from, MinecraftVersion to) {
         super(from, to);
+        configuration = new YamlConfig();
     }
 
     @Override
@@ -94,6 +100,9 @@ public class GlobalProtocolHandler extends ServerProtocol {
             return;
 
         Logger.info("{}: {}", session.getUserData().getUsername(), message);
+        
+        if (configuration.getDiscordWebhookEnabled())
+        	DiscordWebhookHandler.sendWebhookMessage(session.getUserData().getUsername(), message);
 
     }
 }

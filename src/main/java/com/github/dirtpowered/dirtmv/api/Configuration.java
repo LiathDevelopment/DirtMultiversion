@@ -106,4 +106,18 @@ public interface Configuration {
      * again after a recent connection attempt
      */
     int getConnectionThrottleTime();
+
+    /**
+     * Determines if the discord webhook is enabled
+     */
+	boolean getDiscordWebhookEnabled();
+    
+    /**
+     * The webhook URL that the discord bridge
+     * will use to broadcast messages that the
+     * proxy sends to the server. If the webhook URL
+     * is invalid player will disconnect when sending
+     * chat message through the proxy to server
+     */
+	String getDiscordWebhookUrl();
 }

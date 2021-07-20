@@ -136,4 +136,14 @@ public class YamlConfig implements Configuration {
     public int getConnectionThrottleTime() {
         return (int) objects.getOrDefault("connection_throttle", 350);
     }
+    
+    @Override
+    public boolean getDiscordWebhookEnabled() {
+        return (boolean) objects.getOrDefault("discord_webhook_enabled", false);
+    }
+    
+    @Override
+    public String getDiscordWebhookUrl() {
+        return (String) objects.getOrDefault("discord_webhook_url", "");
+    }
 }
