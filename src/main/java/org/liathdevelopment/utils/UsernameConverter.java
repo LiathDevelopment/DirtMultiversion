@@ -1,4 +1,4 @@
-package org.liathdevelopment.discord;
+package org.liathdevelopment.utils;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

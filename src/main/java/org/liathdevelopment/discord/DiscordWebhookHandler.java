@@ -1,5 +1,6 @@
 package org.liathdevelopment.discord;
 
+import org.liathdevelopment.utils.UsernameConverter;
 import org.pmw.tinylog.Logger;
 
 import com.github.dirtpowered.dirtmv.api.Configuration;
