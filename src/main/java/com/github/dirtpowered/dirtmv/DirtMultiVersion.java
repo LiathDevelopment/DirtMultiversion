@@ -90,6 +90,7 @@ public class DirtMultiVersion implements Runnable {
     private ViaPlugin viaPlugin;
 
     private DirtMultiVersion() {
+    	Logger.info("Preparing for connections ...");
         sharedRandom = new Random();
         loopGroup = new NioEventLoopGroup(Runtime.getRuntime().availableProcessors());
         executorService = Executors.newCachedThreadPool();

@@ -103,7 +103,7 @@ public class Server implements DirtServer {
             Configuration c = main.getConfiguration();
 
             future = b.bind(c.getBindAddress(), c.getBindPort()).sync().addListener(callback -> {
-                Logger.info("ready for connections!");
+                Logger.info("Ready for connections!");
             });
             future.channel().closeFuture().sync();
         } catch (InterruptedException e) {

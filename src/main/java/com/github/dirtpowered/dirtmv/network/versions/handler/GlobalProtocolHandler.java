@@ -33,7 +33,7 @@ import com.github.dirtpowered.dirtmv.data.translator.ProtocolState;
 import com.github.dirtpowered.dirtmv.data.translator.ServerProtocol;
 import com.github.dirtpowered.dirtmv.network.server.ServerSession;
 
-import org.liathdevelopment.discord.webhook.DiscordWebhookHandler;
+import org.liathdevelopment.discord.DiscordWebhookHandler;
 import org.pmw.tinylog.Logger;
 
 public class GlobalProtocolHandler extends ServerProtocol {
