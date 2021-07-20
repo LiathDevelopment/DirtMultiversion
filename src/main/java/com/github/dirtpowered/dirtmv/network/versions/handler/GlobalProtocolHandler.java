@@ -101,7 +101,7 @@ public class GlobalProtocolHandler extends ServerProtocol {
 
         Logger.info("{}: {}", session.getUserData().getUsername(), message);
         
-        if (configuration.getDiscordWebhookEnabled())
+        if (configuration.getDiscordWebhookEnabled() && !message.startsWith("/"))
         	DiscordWebhookHandler.sendWebhookMessage(session.getUserData().getUsername(), message);
 
     }
