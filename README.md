@@ -22,7 +22,7 @@ Example: You can connect to beta 1.7.3 server using every version up to release 
 ### Compiling from source
 Using maven:
 ```
-git clone https://github.com/DirtPowered/DirtMultiversion.git
+git clone https://github.com/LiathDevelopment/DirtMultiversion.git
 cd ./DirtMultiversion
 mvn clean package
 ```
